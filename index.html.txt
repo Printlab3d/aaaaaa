@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <title>Model AR</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+      button {
+        font-size: 22px;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 8px;
+        background-color: #2196f3;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #1976d2;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://68933e935788be60f97cee3e--courageous-dasik-601a9f.netlify.app/model.glb&mode=ar_preferred#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://YOUR_NETLIFY_SITE/;end;">
+      <button>Zobacz w AR (Android)</button>
+    </a>
+  </body>
+</html>
