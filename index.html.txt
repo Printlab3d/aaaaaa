@@ -28,7 +28,7 @@
     </style>
   </head>
   <body>
-    <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://68933e935788be60f97cee3e--courageous-dasik-601a9f.netlify.app/model.glb&mode=ar_preferred#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://YOUR_NETLIFY_SITE/;end;">
+    <a href="intent://arvr.google.com/scene-viewer/1.0?file=https://68a9ffaf573770ba40e929bf--taupe-rugelach-a65249.netlify.app/&mode=ar_preferred#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://YOUR_NETLIFY_SITE/;end;">
       <button>Zobacz w AR (Android)</button>
     </a>
   </body>
