@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<title>Otwieranie AR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  html, body {height:100%; margin:0;}
+  body {display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:system-ui,Arial,sans-serif;}
+  .btn {padding:14px 18px; border-radius:12px; border:0; background:#1a73e8; color:#fff; font-weight:600; text-decoration:none; font-size:18px;}
+</style>
+</head>
+<body>
+<h2>Zeskanowałeś QR!</h2>
+<a class="btn" href="intent://arvr.google.com/scene-viewer/1.0?file=https%3A%2F%2Ftaupe-rugelach-a65249.netlify.app%2Fmodel.glb&mode=ar_preferred#Intent;scheme=https;package=com.google.android.googlequicksearchbox;end;">
+  Otwórz w AR
+</a>
+<p>Uwaga: działa tylko na Android + Chrome lub Google App</p>
+</body>
+</html>
