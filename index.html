@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Model AR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      font-family: system-ui, Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f8f8f8;
+    }
+    img.qr {
+      width: 200px;
+      height: 200px;
+      border: 5px solid #1a73e8;
+      border-radius: 16px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 16px 24px;
+      border-radius: 12px;
+      border: none;
+      background-color: #1a73e8;
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+      text-decoration: none;
+      margin-bottom: 16px;
+    }
+    .hint { color:#444; font-size:14px; text-align:center; }
+  </style>
+</head>
+<body>
+
+  <!-- QR kod -->
+  <img class="qr" src="qr.png" alt="Skanuj kod QR aby zobaczyć model w AR">
+
+  <!-- Przycisk AR -->
+  <a class="btn"
+     href="intent://arvr.google.com/scene-viewer/1.0?file=https%3A%2F%2Ftaupe-rugelach-a65249.netlify.app%2Fmodel.glb&mode=ar_preferred#Intent;scheme=https;package=com.google.android.googlequicksearchbox;end;">
+    Otwórz w AR
+  </a>
+
+  <div class="hint">
+    Kliknij przycisk lub zeskanuj QR (Android + Chrome / Google App)
+  </div>
+
+</body>
+</html>
