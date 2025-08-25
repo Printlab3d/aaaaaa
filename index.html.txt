@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Model AR</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       display: flex;
@@ -31,27 +31,24 @@
       font-weight: 600;
       font-size: 18px;
       text-decoration: none;
+      margin-bottom: 16px;
     }
-    .hint {
-      margin-top: 16px;
-      color: #444;
-      font-size: 14px;
-    }
+    .hint { color:#444; font-size:14px; text-align:center; }
   </style>
 </head>
 <body>
 
   <!-- QR kod -->
-  <img class="qr" src="qr.png" alt="Skanuj kod QR, aby zobaczyć model w AR">
+  <img class="qr" src="qr.png" alt="Skanuj kod QR aby zobaczyć model w AR">
 
-  <!-- Przycisk do AR -->
+  <!-- Przycisk AR -->
   <a class="btn"
      href="intent://arvr.google.com/scene-viewer/1.0?file=https%3A%2F%2Ftaupe-rugelach-a65249.netlify.app%2Fmodel.glb&mode=ar_preferred#Intent;scheme=https;package=com.google.android.googlequicksearchbox;end;">
     Otwórz w AR
   </a>
 
   <div class="hint">
-    Skanuj QR lub kliknij przycisk (działa tylko na Android + Chrome/Google App)
+    Kliknij przycisk lub zeskanuj QR (Android + Chrome / Google App)
   </div>
 
 </body>
