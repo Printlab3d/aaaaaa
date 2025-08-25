@@ -2,16 +2,14 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Model AR – Kod QR</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Model AR</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
-    body{display:flex;flex-direction:column;gap:16px;justify-content:center;align-items:center;height:100vh;margin:0;background:#f8f8f8;font-family:system-ui,Arial,sans-serif}
-    img{width:300px;height:300px;border:10px solid #1a73e8;border-radius:20px;background:#fff}
-    .hint{color:#444}
+    body {margin:0; display:flex; justify-content:center; align-items:center; height:100vh; background:#f0f0f0;}
+    model-viewer {width:100%; max-width:600px; height:400px;}
   </style>
 </head>
 <body>
-  <img src="qr.png" alt="Zeskanuj kod QR, aby zobaczyć model w AR">
-  <div class="hint">Skanuj aparatem (Android + Chrome/Google App).</div>
+  <model-viewer src="model.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
 </body>
 </html>
