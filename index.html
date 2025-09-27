@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menu Restauracji AR</title>
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<style>
-  body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0; 
-    padding: 0; 
-    background: #fff8f0; 
-    color: #333;
-  }
-  header {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    padding: 20px; 
-    background: #1a73e8; 
-    color: #fff;
-  }
-  header h1 { margin: 10px 0; }
-  .qr { width: 150px; height: 150px; border: 5px solid #fff; border-radius: 16px; }
-  main { max-width: 800px; margin: 20px auto; padding: 0 10px; }
-  .dish {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    background: #fff3e0; 
-    margin: 10px 0; 
-    padding: 15px; 
-    border-radius: 12px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  .dish-info { max-width: 70%; }
-  .dish-info h3 { margin: 0 0 5px 0; color: #1a73e8; }
-  .dish-info p { margin: 0; font-size: 14px; color: #555; }
-  .btn-ar {
-    padding: 10px 16px;
-    background: #ff7043;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  model-viewer {
-    width: 100%;
-    max-width: 400px;
-    height: 300px;
-    margin: 20px auto;
-    border-radius: 12px;
-    background: #f0f0f0;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Restauracji AR</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8f0;
+      color: #333;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background: #1a73e8;
+      color: #fff;
+    }
+    header h1 { margin: 10px 0; }
+    .qr { width: 150px; height: 150px; border: 5px solid #fff; border-radius: 16px; }
+    main { max-width: 800px; margin: 20px auto; padding: 0 10px; }
+    .dish {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff3e0;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .dish-info { max-width: 70%; }
+    .dish-info h3 { margin: 0 0 5px 0; color: #1a73e8; }
+    .dish-info p { margin: 0; font-size: 14px; color: #555; }
+    .btn-ar {
+      padding: 10px 16px;
+      background: #ff7043;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    model-viewer {
+      width: 100%;
+      max-width: 400px;
+      height: 300px;
+      margin: 20px auto;
+      border-radius: 12px;
+      background: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
 
@@ -65,7 +65,7 @@
 </header>
 
 <main>
-  <!-- Lista dań -->
+  <!-- Danie 1 -->
   <div class="dish">
     <div class="dish-info">
       <h3>Pizza Margherita</h3>
@@ -74,6 +74,7 @@
     <button class="btn-ar" onclick="showAR()">Zobacz w AR</button>
   </div>
 
+  <!-- Danie 2 -->
   <div class="dish">
     <div class="dish-info">
       <h3>Spaghetti Carbonara</h3>
@@ -82,22 +83,26 @@
     <button class="btn-ar" onclick="showAR()">Zobacz w AR</button>
   </div>
 
-  <!-- Dodaj pozostałe dania analogicznie -->
-  <!-- ... powtarzaj do 20 dań ... -->
-
-  <!-- AR model-viewer, będzie pokazywany po kliknięciu -->
-  <model-viewer id="ar-viewer" src="model.glb" 
-                ar ar-modes="scene-viewer webxr quick-look"
-                camera-controls auto-rotate
-                style="display:none;"></model-viewer>
+  <!-- Wspólny viewer dla wszystkich dań -->
+  <model-viewer id="ar-viewer"
+                src="model.glb"
+                ios-src="model.usdz"
+                ar
+                ar-modes="scene-viewer webxr quick-look"
+                camera-controls
+                auto-rotate
+                style="display:none;">
+  </model-viewer>
 </main>
 
 <script>
 function showAR() {
   const viewer = document.getElementById('ar-viewer');
   viewer.style.display = 'block';
-  // Na iOS/Android kliknięcie przycisku w model-viewer uruchamia AR
-  viewer.activateAR();
+  // To polecenie działa tylko na urządzeniach wspierających AR
+  if (viewer.activateAR) {
+    viewer.activateAR();
+  }
 }
 </script>
 
